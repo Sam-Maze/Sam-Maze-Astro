@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5 mt-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Experienced professional with a firm background in computer science fundamentals and a keen attention to detail. I'm currently in the realm of tax and financial software, but I'm also interested in human space travel, environmental preservation, and social media.
+    As somebody who minored in philosophy, I'm also always interested in exploring the ethical considerations surrounding various technologies. 
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Bachelor of Science in Computer Science"
+      subtitle="From 2015 to 2019 at the University of Virginia, Charlottesville, VA">
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Implementation Consultant"
+      subtitle="From 2020 to Present at FAST Enterprises, LLC"
+    >
+    Managed a team that modeled and reported on large datasets for the DC Office of Tax and Revenue. My leadership of this project was formally recognized by the Director of the Tax Systems Group for
+    customer service, innovation, and advancing the agency's mission and goals. In this role, I have worked closely with business teams to implement solutions in both VB.NET and C# to meet requirements.
+    </TimeLineElement>
+    
+    <TimeLineElement
+    title="Student Researcher"
+    subtitle="From 2018 to 2019 at the University of Virginia, Charlottesville, VA"
+    >
+    Architected software that used the Python requests library and amazon EC2 instances to collect user profile data from Yelp.
+    Analyzed scraped user review data using the difference in differences econometric technique between
+    more-private and less-private users by using the Python Plotly and Statistics Libraries. This research was part of a project funded by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1915813&HistoricalAwards=false" class="link link-primary">National Science Foundation</a>.
+  </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills and Technologies</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>SQL</li>
+    <li>VB.NET</li>
+    <li>C#</li>
+    <li>Github</li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Astro</li>
+  </ul>
+</BaseLayout>

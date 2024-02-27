@@ -1,56 +1,24 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: "A Quick Introduction"
+description: "This introduction blog post goes into some detail about what I plan to use this blog for."
+pubDate: "Feb 26, 2024"
+heroImage: "/sam-landscape.png"
+tags: ["personal"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+My plan for this blog is to post one-off life updates, some more technical posts about the projects I'm 
+currently working on, and general musings about the state of technology. With that said, I think the
+best way to kick off this first post is to give you a bit more background on myself. I'll try not to repeat
+any information that can already be found elsewhere on this site.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+I grew up in the suburbs of a small city in central Virginia. My family and I actually lived far enough away 
+from the city that we could nearly make out the Milky Way from our back yard. A favorite pastime of mine growing
+up was stargazing and seeing which constellations I could make out. Like many 90's kids, another pastime of mine 
+was finding pretty much anything I could do with technology. I grew up playing games like Putt-Putt, Freddie Fish, 
+and Pajama Sam from a young age, but I feel lucky in that I also spent a great deal of time outdoors. My parents took me and my siblings camping and hiking, and I've always had a certain reverence for nature.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+Those three themes: space, technology, and nature have always played a crucial role in my life. I think of them as the sort of building-blocks of my intellectual pursuits. I plan on using those three pillars as a guide when exploring which future projects I'm interested in pursuing.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+
+
