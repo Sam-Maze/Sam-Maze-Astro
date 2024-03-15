@@ -41,56 +41,41 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 <!-- Theme Change -->
 <script is:inline>
 	document.addEventListener('astro:page-load', () => {
-
-	if (localStorage.getItem("theme") === null) {
+	  var theme = "";
+	  if (localStorage.getItem("theme") === null) {
 		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			document.documentElement.setAttribute("data-theme", "business");
+			theme = "business";
 		}
 		else {
-			document.documentElement.setAttribute("data-theme", "nord");
+			theme = "nord";
 		}
-		
-	} else {
+		document.documentElement.setAttribute("data-theme", theme);
+	  } else {
 		document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-	}
+	  }
 
-	const theme = (() => {
-	if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-		return localStorage.getItem("theme");
-	}
-	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-		return "business";
-	}
-	return "nord";
-	})();
+	  const isDarkMode = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+	  document.getElementById("themeToggle").checked = isDarkMode;
 
-	if (theme === "nord") {
-		document.documentElement.classList.remove("dark");
-	} else {
-		document.documentElement.classList.add("dark");
-	}
-
-	window.localStorage.setItem("theme", theme);
-
-	const handleToggleClick = () => {
-		const element = document.documentElement;
-		element.classList.toggle("dark");
-
-		const isDark = element.classList.contains("dark");
-
+	  const handleToggleClick = () => {
 		var themeToggle = "nord";
-		if (isDark){
+		const isDark = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+		if (!isDark){
 			themeToggle = "business"
 		}
 		localStorage.setItem("theme", themeToggle);
 		document.documentElement.setAttribute("data-theme", themeToggle);
 	}
-
 	document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
-
 	});
-</script>
-<script>
-	import { themeChange } from "theme-change";
-	themeChange();
-</script>
+  </script>
+  <script>
+	document.addEventListener('astro:after-swap', () => {
+	  localStorage.theme === 'business'
+	  ? document.documentElement.setAttribute("data-theme", "business")
+	  : document.documentElement.setAttribute("data-theme", "nord");
+
+	  const isDarkMode = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+	  document.getElementById("themeToggle").checked = isDarkMode;
+	});
+  </script>
