@@ -39,7 +39,7 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Theme Change -->
-<script is:inline src="/src/scripts/themetoggle.js"></script>
+<script is:inline src="../src/scripts/themetoggle.js"></script>
 <script>
 	import { themeChange } from 'theme-change';
 	themeChange();
