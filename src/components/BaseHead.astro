@@ -54,12 +54,26 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 		document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
 	  }
 
-	  const isDarkMode = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+	  var isDarkMode = false;
+	  if (localStorage.getItem("theme") === null) {
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			isDarkMode = true;
+		}
+	  } else {
+		isDarkMode = (localStorage.getItem("theme") === "business");
+	  }
 	  document.getElementById("themeToggle").checked = isDarkMode;
 
 	  const handleToggleClick = () => {
 		var themeToggle = "nord";
-		const isDark = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+		var isDark = false;
+		if (localStorage.getItem("theme") === null) {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				isDark = true;
+			}
+		} else {
+			isDark = (localStorage.getItem("theme") === "business");
+		}
 		if (!isDark){
 			themeToggle = "business"
 		}
@@ -75,7 +89,15 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 	  ? document.documentElement.setAttribute("data-theme", "business")
 	  : document.documentElement.setAttribute("data-theme", "nord");
 
-	  const isDarkMode = ((localStorage.getItem("theme") === "business") && !(localStorage.getItem("theme") === null));
+	  var isDarkMode = false;
+	  if (localStorage.getItem("theme") === null) {
+		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+			isDarkMode = true;
+		}
+	  } else {
+		isDarkMode = (localStorage.getItem("theme") === "business");
+	  }
+	  
 	  document.getElementById("themeToggle").checked = isDarkMode;
 	});
   </script>
