@@ -3,6 +3,7 @@ title: "A Quick Introduction"
 description: "This introduction blog post goes into some detail about what I plan to use this blog for."
 pubDate: "Feb 26, 2024"
 heroImage: "/sam-landscape.png"
+"slug": "blog/Intro"
 tags: ["personal"]
 ---
 

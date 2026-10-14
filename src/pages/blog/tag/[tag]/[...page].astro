@@ -4,7 +4,11 @@ import HorizontalCard from "@components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../../../../lib/createSlug";
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: (data: any[], options: { params: { tag: string }; pageSize: number }) => any[];
+}) {
   const all_posts = await getCollection("blog");
   const all_tags = all_posts.flatMap((post) => {
     return post.data.tags || [];
@@ -37,7 +41,7 @@ const params = Astro.params;
       </div>
     ) : (
       <ul>
-        {page.data.map((post) => (
+        {page.data.map((post: { data: { title: string; heroImage?: string; description?: string; badge?: string; tags?: string[]; }; slug: string; }) => (
           <>
             <HorizontalCard
               title={post.data.title}

@@ -62,10 +62,15 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 	  } else {
 		isDarkMode = (localStorage.getItem("theme") === "business");
 	  }
-	  document.getElementById("themeToggle").checked = isDarkMode;
+
+	  const themeToggle = document.getElementById("themeToggle");
+	  if (!(themeToggle instanceof HTMLInputElement)) {
+		return;
+	  }
+	  themeToggle.checked = isDarkMode;
 
 	  const handleToggleClick = () => {
-		var themeToggle = "nord";
+		var themeToggleValue = "nord";
 		var isDark = false;
 		if (localStorage.getItem("theme") === null) {
 			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -75,12 +80,12 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 			isDark = (localStorage.getItem("theme") === "business");
 		}
 		if (!isDark){
-			themeToggle = "business"
+			themeToggleValue = "business"
 		}
-		localStorage.setItem("theme", themeToggle);
-		document.documentElement.setAttribute("data-theme", themeToggle);
+		localStorage.setItem("theme", themeToggleValue);
+		document.documentElement.setAttribute("data-theme", themeToggleValue);
 	}
-	document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
+	themeToggle.addEventListener("click", handleToggleClick);
 	});
   </script>
   <script>
@@ -98,6 +103,10 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 		isDarkMode = (localStorage.getItem("theme") === "business");
 	  }
 	  
-	  document.getElementById("themeToggle").checked = isDarkMode;
+	  const themeToggle = document.getElementById("themeToggle");
+	  if (!(themeToggle instanceof HTMLInputElement)) {
+		return;
+	  }
+	  themeToggle.checked = isDarkMode;
 	});
   </script>

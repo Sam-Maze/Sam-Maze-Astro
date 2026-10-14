@@ -2,6 +2,7 @@
 title: "On Plato and Object Oriented Programming"
 description: "We're bringing it back to the basics of philosophy and computer science."
 pubDate: "Oct 12, 2026"
+"slug": "blog/PlatoAndProgramming"
 heroImage: "https://i0.wp.com/artsofthought.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-18-at-5.52.24-PM.png"
 tags: ["philosophy", "computer science"]
 ---
