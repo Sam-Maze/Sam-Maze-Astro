@@ -1,16 +1,22 @@
 ---
-const { title, subtitle } = Astro.props;
+const { title, dates, company, location} = Astro.props;
 ---
 
-<div class="flex">
+<div class="flex min-w-min">
   <div class="education__time">
     <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
     <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
   </div>
-  <div class="experience__data bd-grid px-5 mb-8">
-    <h3 class="font-semibold mb-1">{title}</h3>
-    <span class="font-light text-sm">{subtitle}</span>
-    <p class="my- text-justify">
+  <div class="experience__data grow bd-grid px-5 mb-8 gap-y-5">
+    <div class="flex max-md:flex-col max-md:items-start md:justify-between pr-5">
+      <h3 class="font-semibold mb-1">{title}</h3>
+      <h4 class="text-right font-light italic">{dates}</h4>
+    </div>
+    <div class="flex max-md:flex-col max-md:items-start md:justify-between pr-5">
+      <h5 class="font-light">{company}</h5>
+      <h4 class="text-right font-light italic">{location}</h4>
+    </div>
+    <p class="my-text-justify space-y-4">
       <slot />
     </p>
   </div>
