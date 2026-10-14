@@ -108,7 +108,7 @@ Date birthDate = new Date(1919, 6, 1);
 
 Dog myFavDog = new Dog(breed:"Husky", birthDate:birthDate, furLength:"Long", furColor:"Brown", tailLength:"Long");
 
-dog.setName("Balto");
+myFavDog.setName("Balto");
 ```
 
 Presto, we have a digital version of the dog I was obsessed with as a child! The great part is you can use those 3 lines to birth and name any number of dogs. 
