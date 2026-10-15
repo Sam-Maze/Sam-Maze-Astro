@@ -40,7 +40,7 @@ As referenced above, the allegory of the cave is a tool that Plato uses to furth
 
 As people pass between the bonfire and the prisoners, the things they carry will cast a shadow on the wall. If a prisoner saw the shadow of a large dog that occasionally walks by the fire, they would come to recognize the distinct shape of the shadow and refer to it much like how we refer to actual dogs. In other words, for the prisoners who only know the shadows, the dog-shaped shadow *is* the dog itself. 
 
-We the readers know that the dog's shadow is only a representation of the actual third dimensional being we know as a dog. We know that the shadow is some secondary thing, caused only by the light of the fire being blocked by the *actual* dog. Now imagine, if you will, that the dog in the story (along with any other dog you've seen in your life) are all just imperfect instances of the form Dog.
+We the readers know that the dog's shadow is only a representation of the actual third dimensional being we know as a dog. We know that the shadow is some secondary thing, caused only by the light of the fire being blocked by the *actual* dog. Now imagine, if you will, that the dog in the story (along with any other dog you've seen in your life) is just an imperfect instance of the form Dog.
 
 Just as the prisoners see the shadows as reality, since it's all they can practically see, we see the external world as our reality because it's all that we can practically see. Above this external world sits the world of Forms, which is metaphysical, or outside our perception. Plato saw the great work of philosophers as venturing into that metaphysical world and reporting their findings.
 
