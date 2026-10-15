@@ -70,7 +70,7 @@ public class Dog {
                string furLength,
                string furColor,
                string tailLength) {
-        numLegs = 4; // In this perfect digital world of mine, no dog is born with the wrong number of legs
+        this.numLegs = 4; // In this perfect digital world of mine, no dog is born with the wrong number of legs
         this.breed = breed;
         this.birthDate = birthDate;
         this.furLength = furLength;
@@ -104,9 +104,9 @@ public class Dog {
 This dog class is an abstract definition for what a dog is. That is, what properties a dog has and what actions a dog can do. Here's an example of what it might look like to bring a dog into this digital world.
 
 ```c#
-Date birthDate = new Date(1919, 6, 1);
+var birthDate = new Date(1919, 6, 1);
 
-Dog myFavDog = new Dog(breed:"Husky", birthDate:birthDate, furLength:"Long", furColor:"Brown", tailLength:"Long");
+var myFavDog = new Dog(breed:"Husky", birthDate:birthDate, furLength:"Long", furColor:"Brown", tailLength:"Long");
 
 myFavDog.setName("Balto");
 ```
