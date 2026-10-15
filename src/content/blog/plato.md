@@ -25,7 +25,7 @@ Another exception could be made at this point. How do we account for soups that 
 
 > A soup is a savory liquid food that may be served hot or cold and ***may*** contain bits of solid ingredients ***or be homogenous***.
 
-Now I fear we're getting a little off the beaten path. With this definition, one could argue (as one of my coworkers did) that coffee is a soup, or that a can of V8 (not sponsored btw) is a soup. I was even able to get one or two of my peers to agree that cereal is a soup. Thankfully we weren't the ones tasked with defining what a soup is. If you're curious, the folks at Merriam-Webster defines soup as the following:
+Now I fear we're getting a little off the beaten path. With this definition, one could argue (as one of my coworkers did) that coffee is a soup, or that a can of V8 (not sponsored btw) is a soup. I was even able to get one or two of my peers to agree that cereal is a soup. Thankfully we weren't the ones tasked with defining what a soup is. If you're curious, the folks at Merriam-Webster define soup as the following:
 
 > A liquid food especially with a meat, fish, or vegetable stock as a base and often containing pieces of solid food
 
