@@ -14,7 +14,7 @@ Plato may be the most recognized name in all of philosophy, which I think is a w
 
 The Theory of Forms, or Platonic Idealism, is the a branch of metaphysical thinking which posits that there are general (or abstract) underlying definitions for all things, and that this prototypical form *is* what we mean when we talk about the thing. 
 
-To use and example that I once overheard coworkers discussing: what is soup? If you were tasked with describing what a soup is, how would you approach this? You may find that no matter how generic your definition is, you'd be able to find notable exceptions. For example, you may be tempted to provide some generic definition, such as the following:
+To use an example that I once overheard coworkers discussing: what is soup? If you were tasked with describing what a soup is, how would you approach this? You may find that no matter how generic your definition is, you'd be able to find notable exceptions. For example, you may be tempted to provide some generic definition, such as the following:
 > A soup is a savory liquid food that is served hot and contains bits of solid ingredients. 
 
 One exception that may immediately come to mind is gazpacho, which is served cold. We might amend our definition as follows:
