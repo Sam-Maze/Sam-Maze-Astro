@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import path from 'path';
 import sitemap from '@astrojs/sitemap';
-import tailwind from "@astrojs/tailwind";
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.sam-maze.com',
-  integrations: [mdx(), sitemap(), tailwind()]
+  integrations: [mdx(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
