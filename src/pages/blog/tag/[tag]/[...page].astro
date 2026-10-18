@@ -40,7 +40,7 @@ const params = Astro.params;
         <p>There are no blog posts to show at the moment. Check back later!</p>
       </div>
     ) : (
-      <ul>
+      <ul class="flex flex-col gap-[5px]">
         {page.data.map((post: { data: { title: string; heroImage?: string; description?: string; badge?: string; tags?: string[]; }; slug: string; }) => (
           <>
             <HorizontalCard

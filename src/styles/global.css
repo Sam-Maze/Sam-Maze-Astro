@@ -5,6 +5,13 @@
     logs: false;
 }
 
+/* Round badges/tags in the dark theme to match nord */
+@plugin "daisyui/theme" {
+    name: "business";
+    default: true;
+    --radius-selector: 1rem;
+}
+
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }

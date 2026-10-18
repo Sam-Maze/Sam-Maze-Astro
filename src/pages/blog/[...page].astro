@@ -26,7 +26,7 @@ const { page } = Astro.props;
         <p>There are no blog posts to show at the moment. Check back later!</p>
       </div>
     ) : (
-      <ul>
+      <ul class="flex flex-col gap-[5px]">
         {page.data.map((post) => {
           const postData = post.data as typeof post.data & { badge?: string };
 
