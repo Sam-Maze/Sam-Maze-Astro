@@ -39,74 +39,37 @@ const { title, description, image = '/personal-site.png', ogType = 'website' } =
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Theme Change -->
+<!-- Runs synchronously in <head> so the theme is set before first paint, and
+     again on astro:after-swap before each client-side navigation renders. -->
 <script is:inline>
-	document.addEventListener('astro:page-load', () => {
-	  var theme = "";
-	  if (localStorage.getItem("theme") === null) {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			theme = "business";
-		}
-		else {
-			theme = "nord";
-		}
-		document.documentElement.setAttribute("data-theme", theme);
-	  } else {
-		document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
-	  }
+	(function () {
+		if (window.__themeInit) return;
+		window.__themeInit = true;
 
-	  var isDarkMode = false;
-	  if (localStorage.getItem("theme") === null) {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			isDarkMode = true;
+		function getTheme() {
+			var stored = null;
+			try { stored = localStorage.getItem("theme"); } catch (e) {}
+			if (stored) return stored;
+			return window.matchMedia("(prefers-color-scheme: dark)").matches ? "business" : "nord";
 		}
-	  } else {
-		isDarkMode = (localStorage.getItem("theme") === "business");
-	  }
 
-	  const themeToggle = document.getElementById("themeToggle");
-	  if (!(themeToggle instanceof HTMLInputElement)) {
-		return;
-	  }
-	  themeToggle.checked = isDarkMode;
+		function applyTheme() {
+			document.documentElement.setAttribute("data-theme", getTheme());
+		}
 
-	  const handleToggleClick = () => {
-		var themeToggleValue = "nord";
-		var isDark = false;
-		if (localStorage.getItem("theme") === null) {
-			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-				isDark = true;
-			}
-		} else {
-			isDark = (localStorage.getItem("theme") === "business");
+		function setupToggle() {
+			var themeToggle = document.getElementById("themeToggle");
+			if (!(themeToggle instanceof HTMLInputElement)) return;
+			themeToggle.checked = getTheme() === "business";
+			themeToggle.addEventListener("click", function () {
+				var next = getTheme() === "business" ? "nord" : "business";
+				try { localStorage.setItem("theme", next); } catch (e) {}
+				document.documentElement.setAttribute("data-theme", next);
+			});
 		}
-		if (!isDark){
-			themeToggleValue = "business"
-		}
-		localStorage.setItem("theme", themeToggleValue);
-		document.documentElement.setAttribute("data-theme", themeToggleValue);
-	}
-	themeToggle.addEventListener("click", handleToggleClick);
-	});
-  </script>
-  <script>
-	document.addEventListener('astro:after-swap', () => {
-	  localStorage.theme === 'business'
-	  ? document.documentElement.setAttribute("data-theme", "business")
-	  : document.documentElement.setAttribute("data-theme", "nord");
 
-	  var isDarkMode = false;
-	  if (localStorage.getItem("theme") === null) {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-			isDarkMode = true;
-		}
-	  } else {
-		isDarkMode = (localStorage.getItem("theme") === "business");
-	  }
-	  
-	  const themeToggle = document.getElementById("themeToggle");
-	  if (!(themeToggle instanceof HTMLInputElement)) {
-		return;
-	  }
-	  themeToggle.checked = isDarkMode;
-	});
-  </script>
+		applyTheme();
+		document.addEventListener("astro:after-swap", applyTheme);
+		document.addEventListener("astro:page-load", setupToggle);
+	})();
+</script>
