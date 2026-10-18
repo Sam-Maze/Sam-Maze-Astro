@@ -8,13 +8,13 @@ const { title, dates, company, location} = Astro.props;
     <span class="education__line bg-primary block h-full w-0.5 translate-x-1.75"></span>
   </div>
   <div class="experience__data grow bd-grid px-5 mb-8 gap-y-5">
-    <div class="flex max-md:flex-col max-md:items-start md:justify-between pr-5">
-      <h3 class="font-semibold mb-1">{title}</h3>
-      <h4 class="text-right font-light italic">{dates}</h4>
+    <div class="flex mb-1 max-md:flex-col max-md:items-start md:justify-between pr-5">
+      <h3 class="font-semibold">{title}</h3>
+      <h4 class="text-right font-light italic">{location}</h4>
     </div>
     <div class="flex mb-1 max-md:flex-col max-md:items-start md:justify-between pr-5">
       <h3 class="font-light">{company}</h3>
-      <h4 class="text-right font-light italic">{location}</h4>
+      <h4 class="text-right mb-1 font-light italic">{dates}</h4>
     </div>
     <p class="my-text-justify space-y-2">
       <slot />
