@@ -54,18 +54,21 @@ One way we can save time is to group things that have the same properties or fun
 
 Let's go back to the example of a dog. Dogs come in many breeds, but there are some generalizations we can make about them. For starters, they will mostly all have 4 legs, a tail, and fur. These are the *properties* of a dog. Then there are things that a dog can do, such as eat and bark. These are the *functions* of a dog. Below is a very simplified Dog class that I've left pretty bare-bones for the purposes of this demonstration.
 
-```c#
+```csharp
 public class Dog {
     private int numLegs;
     private string tailLength;
-    private string name;
     private string breed;
+    private string furLength;
     private string furColor;
-    private Date birthDate;
+    private DateTime birthDate;
+
+    // You can pretty much call dogs whatever you want, so there's no real need to validate the input here.
+    public string Name { get; set; }
 
     // This is the "constructor"; it does the work of instantiating our dog object
     public Dog(string breed, 
-               Date birthDate,
+               DateTime birthDate,
                string furLength,
                string furColor,
                string tailLength) {
@@ -77,19 +80,13 @@ public class Dog {
         this.tailLength = tailLength; 
     }
 
-    // You can pretty much call dogs whatever you want, so there's no real need to validate the input here.
-    public void setName(string name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        Date today = new Date();
-        return today.Year - this.birthDate.Year;
+    public int GetAge() {
+        return DateTime.Today.Year - this.birthDate.Year;
     }
 
     // If you know, you know.
-    public int getAgeDogYears(){
-        return getAge() * 7;
+    public int GetAgeDogYears() {
+        return GetAge() * 7;
     }
 
     public void Speak() {
@@ -102,12 +99,12 @@ public class Dog {
 
 This dog class is an abstract definition for what a dog is. That is, what properties a dog has and what actions a dog can do. Here's an example of what it might look like to bring a dog into this digital world.
 
-```c#
-var birthDate = new Date(1919, 6, 1);
+```csharp
+var birthDate = new DateTime(1919, 6, 1);
 
-var myFavDog = new Dog(breed:"Husky", birthDate:birthDate, furLength:"Long", furColor:"Brown", tailLength:"Long");
+var myFavDog = new Dog(breed: "Husky", birthDate: birthDate, furLength: "Long", furColor: "Brown", tailLength: "Long");
 
-myFavDog.setName("Balto");
+myFavDog.Name = "Balto";
 ```
 
 Presto, we have a digital version of the dog I was obsessed with as a child! The great part is you can use those 3 lines to birth and name any number of dogs. 
